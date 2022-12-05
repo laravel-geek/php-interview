@@ -37,3 +37,42 @@ class Concept {
         // toDo
     }
 }
+
+
+/**
+ * Так, набросал. Но надо  надо как-то получше подумать.
+ * в пути набросал, сорри за синтаксис
+ */
+
+class Vault {
+
+    private $method;
+    private $key;
+    private $token;
+
+
+    public function __construct($name_param) {
+        $params = config::Get($name_param) {
+            // ...
+            return $arr;
+        }
+        $this->method = arr[0];
+        $this->key = arr[1];
+    }
+
+    switch ($this->method) {
+        case "in_file"
+            $this->token = param_in_file($this->key)->get;
+            break;
+
+        case "in_DB"
+            $this->token = param_in_DB($this->key)->get;
+            break;
+            ...
+    }
+
+    function param_value() {
+        return $this->token;
+    }
+}
+
